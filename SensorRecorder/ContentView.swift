@@ -8,9 +8,11 @@
 import SwiftUI
 import SwiftUICharts
 
+
 struct ContentView: View {
     @ObservedObject var viewModel: MotionManager
     var body: some View {
+        Text("\(Wrapper.openCVVersionString())")
         Spacer()
         HStack{
             VStack {
@@ -76,7 +78,7 @@ struct ContentView: View {
         }.font(.largeTitle)
         .padding()
     }
-    
+
     private var extraLineData: [ExtraLineDataPoint] {
         [ExtraLineDataPoint(value: 0),
          ExtraLineDataPoint(value: 0),

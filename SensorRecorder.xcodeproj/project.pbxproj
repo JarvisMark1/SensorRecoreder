@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63217D4F26F98F870081106C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63217D4E26F98F860081106C /* opencv2.framework */; };
+		63217D5126F98FAD0081106C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63217D5026F98FAD0081106C /* CoreFoundation.framework */; };
+		63217D5326F98FBD0081106C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63217D5226F98FBD0081106C /* CoreMedia.framework */; };
+		63217D5526F98FC30081106C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63217D5426F98FC30081106C /* CoreGraphics.framework */; };
+		63217D5726F98FCD0081106C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63217D5626F98FCD0081106C /* Accelerate.framework */; };
+		63217D6826F9A0670081106C /* Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63217D6726F9A0670081106C /* Wrapper.mm */; };
 		6364634B26DB92D400338E31 /* SensorRecorderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364634A26DB92D400338E31 /* SensorRecorderApp.swift */; };
 		6364634D26DB92D400338E31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364634C26DB92D400338E31 /* ContentView.swift */; };
 		6364634F26DB92D500338E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6364634E26DB92D500338E31 /* Assets.xcassets */; };
@@ -16,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63217D4E26F98F860081106C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		63217D5026F98FAD0081106C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		63217D5226F98FBD0081106C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		63217D5426F98FC30081106C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63217D5626F98FCD0081106C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		63217D5B26F990580081106C /* Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wrapper.h; sourceTree = "<group>"; };
+		63217D5D26F993DF0081106C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		63217D6626F9A0660081106C /* SensorRecorder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SensorRecorder-Bridging-Header.h"; sourceTree = "<group>"; };
+		63217D6726F9A0670081106C /* Wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Wrapper.mm; sourceTree = "<group>"; };
 		6364634726DB92D400338E31 /* SensorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6364634A26DB92D400338E31 /* SensorRecorderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRecorderApp.swift; sourceTree = "<group>"; };
 		6364634C26DB92D400338E31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +45,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63217D5726F98FCD0081106C /* Accelerate.framework in Frameworks */,
+				63217D5526F98FC30081106C /* CoreGraphics.framework in Frameworks */,
+				63217D5326F98FBD0081106C /* CoreMedia.framework in Frameworks */,
+				63217D5126F98FAD0081106C /* CoreFoundation.framework in Frameworks */,
+				63217D4F26F98F870081106C /* opencv2.framework in Frameworks */,
 				6368E2B926E9029200E59348 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,11 +57,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63217A3C26F989820081106C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63217D4E26F98F860081106C /* opencv2.framework */,
+				63217D5626F98FCD0081106C /* Accelerate.framework */,
+				63217D5426F98FC30081106C /* CoreGraphics.framework */,
+				63217D5226F98FBD0081106C /* CoreMedia.framework */,
+				63217D5026F98FAD0081106C /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6364633E26DB92D400338E31 = {
 			isa = PBXGroup;
 			children = (
+				63217D6726F9A0670081106C /* Wrapper.mm */,
+				63217D5D26F993DF0081106C /* PrefixHeader.pch */,
+				63217D5B26F990580081106C /* Wrapper.h */,
 				6364634926DB92D400338E31 /* SensorRecorder */,
 				6364634826DB92D400338E31 /* Products */,
+				63217A3C26F989820081106C /* Frameworks */,
+				63217D6626F9A0660081106C /* SensorRecorder-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +145,7 @@
 				TargetAttributes = {
 					6364634626DB92D400338E31 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -150,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6364634D26DB92D400338E31 /* ContentView.swift in Sources */,
+				63217D6826F9A0670081106C /* Wrapper.mm in Sources */,
 				6364634B26DB92D400338E31 /* SensorRecorderApp.swift in Sources */,
 				6368E2B126E8D6D800E59348 /* motionManager.swift in Sources */,
 			);
@@ -279,20 +318,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SensorRecorder/Preview Content\"";
 				DEVELOPMENT_TEAM = X9WGV5AV6J;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = /Users/jarvis/XCodeCode/swiftUIStudy/SensorRecorder/PrefixHeader.pch;
 				INFOPLIST_FILE = SensorRecorder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.slamrobot.SensorRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SensorRecorder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -301,20 +352,31 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SensorRecorder/Preview Content\"";
 				DEVELOPMENT_TEAM = X9WGV5AV6J;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = /Users/jarvis/XCodeCode/swiftUIStudy/SensorRecorder/PrefixHeader.pch;
 				INFOPLIST_FILE = SensorRecorder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.slamrobot.SensorRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SensorRecorder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

@@ -12,73 +12,86 @@ import SwiftUICharts
 struct ContentView: View {
     @ObservedObject var viewModel: MotionManager
     var body: some View {
-        Text("\(Wrapper.openCVVersionString())")
-        Spacer()
-        HStack{
-            VStack {
-                Text("Attitude Data")
-                Text("X: \(viewModel.sensorData.attitude.x)")
-                Text("Y: \(viewModel.sensorData.attitude.y)")
-                Text("Z: \(viewModel.sensorData.attitude.z)")
-            }
+        ScrollView{
+            Text("\(Wrapper.openCVVersionString())")
+            showImg()
             Spacer()
-            VStack {
-                Text("Accelerometer Data")
-                Text("X: \(viewModel.sensorData.acc.x)")
-                Text("Y: \(viewModel.sensorData.acc.y)")
-                Text("Z: \(viewModel.sensorData.acc.z)")
-            }
-        }.padding()
-        .font(.title3)
-        Spacer()
-        HStack{
-            VStack {
-                Text("Gyroscope Data")
-                Text("X: \(viewModel.sensorData.gyr.x)")
-                Text("Y: \(viewModel.sensorData.gyr.y)")
-                Text("Z: \(viewModel.sensorData.gyr.z)")
-            }
+            HStack{
+                VStack {
+                    Text("Attitude Data")
+                    Text("X: \(viewModel.sensorData.attitude.x)")
+                    Text("Y: \(viewModel.sensorData.attitude.y)")
+                    Text("Z: \(viewModel.sensorData.attitude.z)")
+                }
+                Spacer()
+                VStack {
+                    Text("Accelerometer Data")
+                    Text("X: \(viewModel.sensorData.acc.x)")
+                    Text("Y: \(viewModel.sensorData.acc.y)")
+                    Text("Z: \(viewModel.sensorData.acc.z)")
+                }
+            }.padding()
+            .font(.title3)
             Spacer()
-            VStack {
-                Text("Magnetometer Data")
-                Text("X: \(viewModel.sensorData.mag.x)")
-                Text("Y: \(viewModel.sensorData.mag.y)")
-                Text("Z: \(viewModel.sensorData.mag.z)")
-            }
-        }.padding()
-        .font(.title3)
-        Spacer()
+            HStack{
+                VStack {
+                    Text("Gyroscope Data")
+                    Text("X: \(viewModel.sensorData.gyr.x)")
+                    Text("Y: \(viewModel.sensorData.gyr.y)")
+                    Text("Z: \(viewModel.sensorData.gyr.z)")
+                }
+                Spacer()
+                VStack {
+                    Text("Magnetometer Data")
+                    Text("X: \(viewModel.sensorData.mag.x)")
+                    Text("Y: \(viewModel.sensorData.mag.y)")
+                    Text("Z: \(viewModel.sensorData.mag.z)")
+                }
+            }.padding()
+            .font(.title3)
+            Spacer()
 
-        //MARK: start charts
-        let LineChartData = createData(data: viewModel.LineChartDataX, time: viewModel.TimeList)
-        let data = LineChartData
-        LineChart(chartData: LineChartData)
-            .touchOverlay(chartData: data, specifier: "%.001f", unit: .suffix(of: "m/s^2"))
-            .xAxisGrid(chartData: data)
-            .yAxisGrid(chartData: data)
-            .yAxisLabels(chartData: data, colourIndicator: .style(size: 12))
-            .floatingInfoBox(chartData: data)
-            .frame(minWidth: 300, maxWidth: 400, minHeight: 300, idealHeight: 500, maxHeight: 600, alignment: .center)
-            .padding(.horizontal)
-            .navigationTitle("Atitude")
-        //MARK: end charts
-        
-        HStack{
-            Button(action: {
-                viewModel.start()
-            }, label: {
-                Image(systemName: "arrowtriangle.right.circle")
-            })
-            Spacer()
-            Button(action: {
-                viewModel.stop()
-            }, label: {
-                Image(systemName: "pause.circle")
-            })
-        }.font(.largeTitle)
-        .padding()
+            //MARK: start charts
+            let LineChartData = createData(data: viewModel.LineChartDataX, time: viewModel.TimeList)
+            let data = LineChartData
+            LineChart(chartData: LineChartData)
+                .touchOverlay(chartData: data, specifier: "%.001f", unit: .suffix(of: "m/s^2"))
+                .xAxisGrid(chartData: data)
+                .yAxisGrid(chartData: data)
+                .yAxisLabels(chartData: data, colourIndicator: .style(size: 12))
+                .floatingInfoBox(chartData: data)
+                .frame(minWidth: 300, maxWidth: 400, minHeight: 300, idealHeight: 500, maxHeight: 600, alignment: .center)
+                .padding(.horizontal)
+                .navigationTitle("Atitude")
+            //MARK: end charts
+            
+            HStack{
+                Button(action: {
+                    viewModel.start()
+                }, label: {
+                    Image(systemName: "arrowtriangle.right.circle")
+                })
+                Spacer()
+                Button(action: {
+                    viewModel.stop()
+                }, label: {
+                    Image(systemName: "pause.circle")
+                })
+            }.font(.largeTitle)
+            .padding()
+        }
     }
 
+    func showImg() -> Image? {
+        let img = UIImage(named: "DSC00026.png")
+        let img_gray = Wrapper.cvtColorBGR2GRAY(img)
+        if let image  = img_gray {
+            return Image(uiImage: image)
+                .resizable()
+        } else {
+            return Image(systemName: "bolt.slash.fill")
+        }
+    }
     private var extraLineData: [ExtraLineDataPoint] {
         [ExtraLineDataPoint(value: 0),
          ExtraLineDataPoint(value: 0),

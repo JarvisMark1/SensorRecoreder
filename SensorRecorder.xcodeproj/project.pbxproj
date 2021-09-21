@@ -13,6 +13,7 @@
 		63217D5526F98FC30081106C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63217D5426F98FC30081106C /* CoreGraphics.framework */; };
 		63217D5726F98FCD0081106C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63217D5626F98FCD0081106C /* Accelerate.framework */; };
 		63217D6826F9A0670081106C /* Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63217D6726F9A0670081106C /* Wrapper.mm */; };
+		6334FB1126F9F8E900CA0EE4 /* DSC00026.png in Resources */ = {isa = PBXBuildFile; fileRef = 6334FB1026F9F8E900CA0EE4 /* DSC00026.png */; };
 		6364634B26DB92D400338E31 /* SensorRecorderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364634A26DB92D400338E31 /* SensorRecorderApp.swift */; };
 		6364634D26DB92D400338E31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6364634C26DB92D400338E31 /* ContentView.swift */; };
 		6364634F26DB92D500338E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6364634E26DB92D500338E31 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		63217D5D26F993DF0081106C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		63217D6626F9A0660081106C /* SensorRecorder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SensorRecorder-Bridging-Header.h"; sourceTree = "<group>"; };
 		63217D6726F9A0670081106C /* Wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Wrapper.mm; sourceTree = "<group>"; };
+		6334FB1026F9F8E900CA0EE4 /* DSC00026.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSC00026.png; sourceTree = "<group>"; };
 		6364634726DB92D400338E31 /* SensorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6364634A26DB92D400338E31 /* SensorRecorderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRecorderApp.swift; sourceTree = "<group>"; };
 		6364634C26DB92D400338E31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		6364633E26DB92D400338E31 = {
 			isa = PBXGroup;
 			children = (
+				6334FB1026F9F8E900CA0EE4 /* DSC00026.png */,
 				63217D6726F9A0670081106C /* Wrapper.mm */,
 				63217D5D26F993DF0081106C /* PrefixHeader.pch */,
 				63217D5B26F990580081106C /* Wrapper.h */,
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6364635226DB92D600338E31 /* Preview Assets.xcassets in Resources */,
+				6334FB1126F9F8E900CA0EE4 /* DSC00026.png in Resources */,
 				6364634F26DB92D500338E31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
